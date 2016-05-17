@@ -10,8 +10,7 @@ import {Component, OnInit} from "angular2/core";
       <weather-item *ngFor="#weatherItem of weatherItems" [item]="weatherItem"></weather-item>
     </section>
   `,
-  directives: [WeatherItemComponent],
-  providers: [WeatherService]
+  directives: [WeatherItemComponent]
 })
 export class WeatherListComponent implements OnInit {
   weatherItems: WeatherItem[];
