@@ -8,6 +8,7 @@ import {WeatherItem} from "./weather-item";
       <div class="col-1">
         <h3>{{weatherItem.cityName}}</h3>
         <p class="info">{{weatherItem.description}}</p>
+        <img src="//openweathermap.org/img/w/{{weatherItem.icon}}.png">
       </div>
       <div class="col-2">
         <span class="temperature">{{weatherItem.temperature}}&#8451;</span>

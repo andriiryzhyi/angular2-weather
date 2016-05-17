@@ -20,7 +20,7 @@ export class WeatherService {
   }
 
   searchWeatherData(cityName: string): Observable<any> {
-    return this._http.get('http://api.openweathermap.org/data/2.5/weather?q=' + cityName + '&APPID=10b6909f93442b41be1f1aea1619cf98&units=metric')
+    return this._http.get('//api.openweathermap.org/data/2.5/weather?q=' + cityName + '&APPID=10b6909f93442b41be1f1aea1619cf98&units=metric')
             .map(response => response.json())
             .catch(error => {
                 console.error(error);
