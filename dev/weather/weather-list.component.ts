@@ -1,15 +1,26 @@
+import {WeatherService} from "./weather.service";
+import {WeatherItem} from "./weather-item";
 import {WeatherItemComponent} from "./weather-item.component";
-import {Component} from "angular2/core";
+import {Component, OnInit} from "angular2/core";
 
 @Component({
   selector: 'weather-list',
   template: `
-    <section>
-      <weather-item></weather-item>
+    <section class="weather-list">
+      <weather-item *ngFor="#weatherItem of weatherItems" [item]="weatherItem"></weather-item>
     </section>
   `,
-  directives: [WeatherItemComponent]
+  directives: [WeatherItemComponent],
+  providers: [WeatherService]
 })
-export class WeatherListComponent {
+export class WeatherListComponent implements OnInit {
+  weatherItems: WeatherItem[];
 
+  constructor(private _weatherService: WeatherService) {
+
+  }
+
+  ngOnInit():any {
+    this.weatherItems = this._weatherService.getWeatherItems();
+  }
 }
