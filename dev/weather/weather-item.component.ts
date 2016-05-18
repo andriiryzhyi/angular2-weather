@@ -6,7 +6,7 @@ import {WeatherItem} from "./weather-item";
   template: `
     <article class="weather-element">
       <div class="col-1">
-        <h3>{{weatherItem.cityName}}</h3>
+        <h3>{{weatherItem.cityName}}, <span>{{weatherItem.country}}</span></h3>
         <p class="info">{{weatherItem.description}}</p>
         <img src="//openweathermap.org/img/w/{{weatherItem.icon}}.png">
       </div>

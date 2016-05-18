@@ -3,7 +3,8 @@ export class WeatherItem {
     public cityName: string,
     public description: string,
     public temperature: number,
-    public icon: number
+    public icon: number,
+    public country: string
   ) {
 
   }

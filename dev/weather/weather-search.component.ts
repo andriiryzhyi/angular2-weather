@@ -30,9 +30,9 @@ export class WeatherSearchComponent implements OnInit {
       this.data.name,
       this.data.weather[0].description,
       this.data.main.temp,
-      this.data.weather[0].icon
+      this.data.weather[0].icon,
+      this.data.sys.country
     );
-    console.log(this.data.weather[0].icon);
     this._weatherService.addWeatherItem(weatherItem);
   }
 
